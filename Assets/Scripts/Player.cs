@@ -20,9 +20,8 @@ public class Player : ActorBase
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (IsDead) return;
+    protected override void Update() {
+        base.Update();
         if (GameManager.Instance.GetTouchDir() != Vector3.zero)
         {
             _rigidbody.MovePosition(transform.position +
