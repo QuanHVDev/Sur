@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c80a48e7-c2d5-4586-b43c-5f4409dca968" name="Changes" comment="dead">
+    <list default="true" id="c80a48e7-c2d5-4586-b43c-5f4409dca968" name="Changes" comment="spawn exp">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sur/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sur/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Collector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Exp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Exp.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +40,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/ExpSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyFeature.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BaseUiElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GamePlayUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Singletons.cs" root0="FORCE_HIGHLIGHTING" />
@@ -129,7 +133,7 @@
       <workItem from="1699240271816" duration="136000" />
       <workItem from="1699240525805" duration="788000" />
       <workItem from="1699241326109" duration="8953000" />
-      <workItem from="1699256018943" duration="3878000" />
+      <workItem from="1699256018943" duration="5117000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -171,7 +175,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699257339651</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="spawn exp">
+      <option name="closed" value="true" />
+      <created>1699260170091</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699260170091</updated>
+    </task>
+    <task id="LOCAL-00007" summary="spawn exp">
+      <option name="closed" value="true" />
+      <created>1699260270494</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699260270494</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +217,8 @@
     <MESSAGE value="move" />
     <MESSAGE value="spawn player - enemy" />
     <MESSAGE value="dead" />
-    <option name="LAST_COMMIT_MESSAGE" value="dead" />
+    <MESSAGE value="spawn exp" />
+    <option name="LAST_COMMIT_MESSAGE" value="spawn exp" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

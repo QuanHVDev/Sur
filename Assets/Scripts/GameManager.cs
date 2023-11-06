@@ -12,6 +12,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     [SerializeField] private ActorSO playerDataSO;
     [SerializeField] private ActorSO enemyDataSO;
 
+    [SerializeField] private float gameTimeDuring = 15f;
 
     private void Start()
     {
@@ -27,8 +28,11 @@ public class GameManager : SingletonBehaviour<GameManager>
     
     private List<Enemy> enemies;
     public Player Player { get; private set; }
+
+    private float startTime;
     private IEnumerator GameLoops()
     {
+        startTime = Time.time;
         enemies = new List<Enemy>();
         Player = Instantiate(playerPrefab, spawnPlayer);
         Player.Init(playerDataSO);
@@ -43,15 +47,14 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         StartCoroutine(SpawnExpAsync());
         yield return new WaitUntil(() => {
-            if (Player.IsDead || IsBossDead) {
+            if (Player.IsDead || IsBossDead || IsOverTime) {
                 return true;
             }
-            
 
             return false;
         });
         
-        isSpawn = false;
+        isSpawnExp = false;
         if (Player.IsDead) {
             foreach (var e in enemies) {
                 e.SetCanMove(false);
@@ -59,14 +62,14 @@ public class GameManager : SingletonBehaviour<GameManager>
         }
     }
 
-    private bool isSpawn = false;
+    private bool isSpawnExp = false;
     [SerializeField] private Exp exp;
     IEnumerator SpawnExpAsync()
     {
         float nextTimeSpawn = 0;
         float deltaTime = 1f;
-        isSpawn = true;
-        while (isSpawn)
+        isSpawnExp = true;
+        while (isSpawnExp)
         {
             yield return new WaitForSeconds(deltaTime);
             Instantiate(exp, spawnExps[Random.Range(0, spawnExps.Count)]);
@@ -107,7 +110,9 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         return dir.normalized;
     }
-    
+
+    public bool IsOverTime => startTime + gameTimeDuring < Time.time;
+
 }
 
 public enum StateActor{

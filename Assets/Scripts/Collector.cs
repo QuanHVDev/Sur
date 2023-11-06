@@ -13,7 +13,7 @@ public class Collector : MonoBehaviour
             foreach (var hit in hits) {
                 if (hit.transform.TryGetComponent(out Exp exp)) {
                     if (!exp.IsCollected) {
-                        exp.Collected();
+                        exp.Interact();
                         OnCollectExp?.Invoke(exp);
                     }
                 }
