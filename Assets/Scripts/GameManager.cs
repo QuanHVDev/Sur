@@ -2,17 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : SingletonBehaviour<GameManager>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GamePlayUI gamePlayUI;
 
-    // Update is called once per frame
-    void Update()
+    public Vector3 GetTouchDir()
     {
+        if (gamePlayUI.TouchDir != Vector3.zero)
+        {
+            return gamePlayUI.TouchDir;
+        }
         
+        Vector3 dir = Vector3.zero;
+        if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.LeftArrow)))
+        {
+            dir.x = -1;
+        }
+        if (Input.GetKey(KeyCode.W) || (Input.GetKey(KeyCode.UpArrow)))
+        {
+            dir.y = 1;
+        }
+
+        if (Input.GetKey(KeyCode.D)||(Input.GetKey(KeyCode.RightArrow)))
+        {
+            dir.x = 1;
+        }
+            
+        if (Input.GetKey(KeyCode.S)||(Input.GetKey(KeyCode.DownArrow)))
+        {
+            dir.y = -1;
+        }
+
+        return dir.normalized;
     }
 }
