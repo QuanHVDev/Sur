@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   dame: 1
-  speed: 7
+  speed: 12
+  delayAttack: 2
+  attackRange: 2

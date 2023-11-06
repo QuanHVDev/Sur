@@ -12,7 +12,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     [SerializeField] private ActorSO playerDataSO;
     [SerializeField] private ActorSO enemyDataSO;
 
-    [SerializeField] private float gameTimeDuring = 15f;
+    [SerializeField] private float gameTimeDuring = 300f;
 
     private void Start()
     {
@@ -36,16 +36,21 @@ public class GameManager : SingletonBehaviour<GameManager>
         enemies = new List<Enemy>();
         Player = Instantiate(playerPrefab, spawnPlayer);
         Player.Init(playerDataSO);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 2; i++) {
             var e = Instantiate(enemyPrefab, spawnPoints[Random.Range(0, spawnPoints.Count)]);
             e.Init(enemyDataSO);
             e.SetTarget(Player.transform);
             e.name = "enemy_" + i;
+            e.OnDead += () =>
+            {
+                Exp exp = SpawnExp();
+                exp.transform.position = e.transform.position;
+            };
             enemies.Add(e);
             
         }
 
-        StartCoroutine(SpawnExpAsync());
+        //StartCoroutine(SpawnExpAsync());
         yield return new WaitUntil(() => {
             if (Player.IsDead || IsBossDead || IsOverTime) {
                 return true;
@@ -54,6 +59,7 @@ public class GameManager : SingletonBehaviour<GameManager>
             return false;
         });
         
+        Debug.Log("gameover");
         isSpawnExp = false;
         if (Player.IsDead) {
             foreach (var e in enemies) {
@@ -61,6 +67,13 @@ public class GameManager : SingletonBehaviour<GameManager>
             }
         }
     }
+
+    [ContextMenu("SetDeadRandomEnemy")]
+    public void SetDeadRandomEnemy() {
+        var e = enemies[Random.Range(0, enemies.Count)];
+        e.Dead();
+    }
+    
 
     private bool isSpawnExp = false;
     [SerializeField] private Exp exp;
@@ -72,8 +85,14 @@ public class GameManager : SingletonBehaviour<GameManager>
         while (isSpawnExp)
         {
             yield return new WaitForSeconds(deltaTime);
-            Instantiate(exp, spawnExps[Random.Range(0, spawnExps.Count)]);
+            Exp exp = SpawnExp();
+            exp.transform.position = spawnExps[Random.Range(0, spawnExps.Count)].position;
         }
+    }
+
+    private Exp SpawnExp()
+    {
+        return Instantiate(exp);
     }
 
     

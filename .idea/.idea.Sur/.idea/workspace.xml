@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c80a48e7-c2d5-4586-b43c-5f4409dca968" name="Changes" comment="spawn exp">
+    <list default="true" id="c80a48e7-c2d5-4586-b43c-5f4409dca968" name="Changes" comment="collect">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sur/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sur/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Collector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Exp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Exp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/enemySO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/enemySO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/playerSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/playerSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/ActorSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/ActorSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +41,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActorBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/ActorBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/Collector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/ActorSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Exp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/ExpSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,6 +62,7 @@
   </component>
   <component name="ProjectId" id="2XmfFHBPr3NKuJq6v3VyU4RtC4n" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="foldersAlwaysOnTop" value="false" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -133,7 +141,7 @@
       <workItem from="1699240271816" duration="136000" />
       <workItem from="1699240525805" duration="788000" />
       <workItem from="1699241326109" duration="8953000" />
-      <workItem from="1699256018943" duration="5117000" />
+      <workItem from="1699256018943" duration="8277000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -191,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699260270494</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="collect">
+      <option name="closed" value="true" />
+      <created>1699261280511</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699261280511</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +234,8 @@
     <MESSAGE value="spawn player - enemy" />
     <MESSAGE value="dead" />
     <MESSAGE value="spawn exp" />
-    <option name="LAST_COMMIT_MESSAGE" value="spawn exp" />
+    <MESSAGE value="collect" />
+    <option name="LAST_COMMIT_MESSAGE" value="collect" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -32,6 +32,7 @@ public class Player : ActorBase
     }
 
     public override void Dead() {
+        base.Dead();
         IsDead = true;
     }
 }

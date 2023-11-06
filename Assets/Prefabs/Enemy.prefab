@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2850669920568106278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: -8844907190609245516}
   - component: {fileID: 3073252446700551853}
   - component: {fileID: 2438951650837566731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,8 +167,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDead: 0
+  IsCanAttack: 0
   aiPath: {fileID: 9185386722117357503}
   aiDestinationSetter: {fileID: 4395648344892978655}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!58 &3073252446700551853
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -241,7 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5216148162823820606}
   - component: {fileID: 1864756711934676439}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChikBoy_idle_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
