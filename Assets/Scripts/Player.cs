@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : ActorBase
 {
     [SerializeField] private Rigidbody2D _rigidbody;
     public float speedMovements = 5f;
+    
 
     // Update is called once per frame
     void Update()
