@@ -79,8 +79,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81685681e7cb5f44a15f370411c79e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsDead: 0
   _rigidbody: {fileID: 8392353975269891219}
-  speedMovements: 7
+  speedMovements: 0
 --- !u!70 &8185077361296633488
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

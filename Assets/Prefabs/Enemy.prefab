@@ -114,7 +114,7 @@ MonoBehaviour:
   radius: 0.46
   height: 2
   canMove: 1
-  maxSpeed: 3
+  maxSpeed: 0
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDead: 0
+  aiPath: {fileID: 9185386722117357503}
   aiDestinationSetter: {fileID: 4395648344892978655}
 --- !u!58 &3073252446700551853
 CircleCollider2D:

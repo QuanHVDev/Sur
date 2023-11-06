@@ -7,9 +7,53 @@ using Random = UnityEngine.Random;
 public class GameManager : SingletonBehaviour<GameManager>
 {
     [SerializeField] private GamePlayUI gamePlayUI;
-    [SerializeField] private Enemy enemy;
-    [SerializeField] private Player player;
+    [SerializeField] private Enemy enemyPrefab;
+    [SerializeField] private Player playerPrefab;
+    [SerializeField] private ActorSO playerDataSO;
+    [SerializeField] private ActorSO enemyDataSO;
 
+
+    private void Start()
+    {
+        StartCoroutine(GameLoops());
+    }
+
+    [SerializeField] private Transform spawnPlayer;
+    [SerializeField]  private List<Transform> spawnPoints;
+    
+    public bool IsBossDead = false;
+    
+    
+    private List<Enemy> enemies;
+    public Player Player { get; private set; }
+    private IEnumerator GameLoops()
+    {
+        enemies = new List<Enemy>();
+        Player = Instantiate(playerPrefab, spawnPlayer);
+        Player.Init(playerDataSO);
+        for (int i = 0; i < 10; i++) {
+            var e = Instantiate(enemyPrefab, spawnPoints[Random.Range(0, spawnPoints.Count)]);
+            e.Init(enemyDataSO);
+            e.SetTarget(Player.transform);
+            e.name = "enemy_" + i;
+            enemies.Add(e);
+            
+        }
+
+        yield return new WaitUntil(() => {
+            return Player.IsDead || IsBossDead;
+        });
+
+        if (Player.IsDead) {
+            foreach (var e in enemies) {
+                e.SetCanMove(false);
+            }
+        }
+    }
+    
+    
+    
+    
     public Vector3 GetTouchDir()
     {
         if (gamePlayUI.TouchDir != Vector3.zero)
@@ -40,37 +84,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         return dir.normalized;
     }
-
-    private void Start()
-    {
-        StartCoroutine(GameLoops());
-    }
-
-    [SerializeField] private Transform spawnPlayer;
-    [SerializeField]  private List<Transform> spawnPoints;
     
-    public bool IsBossDead = false;
-    
-    
-    private List<Enemy> enemies;
-    public Player Player { get; private set; }
-    private IEnumerator GameLoops()
-    {
-        enemies = new List<Enemy>();
-        Player = Instantiate(player, spawnPlayer);
-        for (int i = 0; i < 10; i++)
-        {
-            var e = Instantiate(enemy, spawnPoints[Random.Range(0, spawnPoints.Count)]);
-            e.Init(Player.transform);
-            enemies.Add(e);
-        }
-
-        yield return new WaitUntil(() =>
-        {
-            return player.IsDead || IsBossDead;
-        });
-        Debug.Log("GameOver");
-    }
 }
 
 public enum StateActor{
