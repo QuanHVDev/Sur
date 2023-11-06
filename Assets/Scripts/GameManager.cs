@@ -20,6 +20,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     [SerializeField] private Transform spawnPlayer;
     [SerializeField]  private List<Transform> spawnPoints;
+    [SerializeField]  private List<Transform> spawnExps;
     
     public bool IsBossDead = false;
     
@@ -40,8 +41,14 @@ public class GameManager : SingletonBehaviour<GameManager>
             
         }
 
+        StartCoroutine(SpawnExpAsync());
         yield return new WaitUntil(() => {
-            return Player.IsDead || IsBossDead;
+            if (Player.IsDead || IsBossDead) {
+                return true;
+            }
+            
+
+            return false;
         });
 
         if (Player.IsDead) {
@@ -50,6 +57,21 @@ public class GameManager : SingletonBehaviour<GameManager>
             }
         }
     }
+
+    private bool isSpawn = false;
+    [SerializeField] private Exp exp;
+    IEnumerator SpawnExpAsync()
+    {
+        float nextTimeSpawn = 0;
+        float deltaTime = 1f;
+        isSpawn = true;
+        while (isSpawn)
+        {
+            yield return new WaitForSeconds(deltaTime);
+            Instantiate(exp, spawnExps[Random.Range(0, spawnExps.Count)]);
+        }
+    }
+
     
     
     
