@@ -51,7 +51,8 @@ public class Enemy : ActorBase
         yield return new WaitForSeconds(duringTime);
         aiPath.maxSpeed = currentSpeed;
     }
-
+    
+    [ContextMenu("DEAD")]
     public override void Dead() {
         base.Dead();
         aiDestinationSetter.target = transform;

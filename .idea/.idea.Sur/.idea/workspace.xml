@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c80a48e7-c2d5-4586-b43c-5f4409dca968" name="Changes" comment="collect">
+    <list default="true" id="c80a48e7-c2d5-4586-b43c-5f4409dca968" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sur/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sur/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/enemySO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/enemySO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Monsters/Goblin/Idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Goblin/Idle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Monsters/Mushroom/Idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Mushroom/Idle.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/playerSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/playerSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/ActorSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/ActorSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Exp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Exp.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,18 +40,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63fb9d7bd92242a7b4218da88657af33c400/b8/3e34bc84/UnityWebRequest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eef08f56e2e042f1b3027eca477293d946ac00/8e/553f64d6/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActorBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/ActorBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/Collector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/ActorSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Exp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/ExpSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/LevelSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyFeature.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BaseUiElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GamePlayUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Singletons.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,7 +53,7 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2XmfFHBPr3NKuJq6v3VyU4RtC4n" />
   <component name="ProjectViewState">
@@ -115,10 +110,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18708">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="18708" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -142,6 +137,7 @@
       <workItem from="1699240525805" duration="788000" />
       <workItem from="1699241326109" duration="8953000" />
       <workItem from="1699256018943" duration="8277000" />
+      <workItem from="1699264994533" duration="4353000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -207,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699261280511</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="misssing">
+      <option name="closed" value="true" />
+      <created>1699265152046</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699265152046</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +239,79 @@
     <MESSAGE value="dead" />
     <MESSAGE value="spawn exp" />
     <MESSAGE value="collect" />
-    <option name="LAST_COMMIT_MESSAGE" value="collect" />
+    <MESSAGE value="misssing" />
+    <option name="LAST_COMMIT_MESSAGE" value="misssing" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
+          <line>90</line>
+          <properties documentPath="D:\UnityProject\Sur\Assets\Scripts\GameManager.cs" initialLine="90" containingFunctionPresentation="Lambda expression inside Method 'GameLoops'">
+            <startOffsets>
+              <option value="2695" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2723" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
+          <line>87</line>
+          <properties documentPath="D:\UnityProject\Sur\Assets\Scripts\GameManager.cs" initialLine="87" containingFunctionPresentation="Lambda expression inside Method 'GameLoops'">
+            <startOffsets>
+              <option value="2566" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2596" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs</url>
+          <line>57</line>
+          <properties documentPath="D:\UnityProject\Sur\Assets\Scripts\Enemy.cs" initialLine="56" containingFunctionPresentation="Method 'Dead'">
+            <startOffsets>
+              <option value="1610" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1649" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/ActorBase.cs</url>
+          <line>50</line>
+          <properties documentPath="D:\UnityProject\Sur\Assets\Scripts\ActorBase.cs" initialLine="50" containingFunctionPresentation="Method 'TakeDame'">
+            <startOffsets>
+              <option value="1348" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1355" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/ActorBase.cs</url>
+          <line>55</line>
+          <properties documentPath="D:\UnityProject\Sur\Assets\Scripts\ActorBase.cs" initialLine="55" containingFunctionPresentation="Method 'Dead'">
+            <startOffsets>
+              <option value="1414" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1428" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1092,7 +1092,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 2217976117700461116, guid: 79764e8525c67fd4c9c1aec547073718, type: 3}
   playerDataSO: {fileID: 11400000, guid: ccc3eb42510948e4fb9fff9fb676fbe0, type: 2}
   enemyDataSO: {fileID: 11400000, guid: e8bd81e529c40d94da9fe8a5527a9580, type: 2}
-  gameTimeDuring: 300
+  levelSO: {fileID: 11400000, guid: f2f949636a6f4d749b226d388969eb2f, type: 2}
   spawnPlayer: {fileID: 41415916}
   spawnPoints:
   - {fileID: 237092466}

@@ -43,6 +43,8 @@ public class ActorBase : MonoBehaviour
     }
     
     public virtual void TakeDame(float dame) {
+        if (IsDead) return;
+        
         Hp -= dame;
         if (Hp <= 0) {
             Hp = 0;

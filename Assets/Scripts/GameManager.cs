@@ -12,11 +12,11 @@ public class GameManager : SingletonBehaviour<GameManager>
     [SerializeField] private ActorSO playerDataSO;
     [SerializeField] private ActorSO enemyDataSO;
 
-    [SerializeField] private float gameTimeDuring = 300f;
+    [SerializeField] private LevelSO levelSO;
 
     private void Start()
     {
-        StartCoroutine(GameLoops());
+        StartCoroutine(StartGame());
     }
 
     [SerializeField] private Transform spawnPlayer;
@@ -30,12 +30,17 @@ public class GameManager : SingletonBehaviour<GameManager>
     public Player Player { get; private set; }
 
     private float startTime;
-    private IEnumerator GameLoops()
+    private float timeAttackBoss;
+    private IEnumerator StartGame()
     {
         startTime = Time.time;
+        timeAttackBoss = 0;
+        
         enemies = new List<Enemy>();
+        
         Player = Instantiate(playerPrefab, spawnPlayer);
         Player.Init(playerDataSO);
+        
         for (int i = 0; i < 2; i++) {
             var e = Instantiate(enemyPrefab, spawnPoints[Random.Range(0, spawnPoints.Count)]);
             e.Init(enemyDataSO);
@@ -49,17 +54,11 @@ public class GameManager : SingletonBehaviour<GameManager>
             enemies.Add(e);
             
         }
-
-        //StartCoroutine(SpawnExpAsync());
-        yield return new WaitUntil(() => {
-            if (Player.IsDead || IsBossDead || IsOverTime) {
-                return true;
-            }
-
-            return false;
-        });
         
+        StartCoroutine(SpawnExpAsync());
+        yield return GameLoops();
         Debug.Log("gameover");
+        
         isSpawnExp = false;
         if (Player.IsDead) {
             foreach (var e in enemies) {
@@ -68,12 +67,37 @@ public class GameManager : SingletonBehaviour<GameManager>
         }
     }
 
-    [ContextMenu("SetDeadRandomEnemy")]
-    public void SetDeadRandomEnemy() {
-        var e = enemies[Random.Range(0, enemies.Count)];
-        e.Dead();
+
+    IEnumerator GameLoops()
+    {
+        int indexBoss = 0;
+        yield return new WaitUntil(() =>
+        {
+            if (Player.IsDead || IsOverTime)
+            {
+                return true;
+            }
+
+            if (indexBoss < levelSO.Steps.Count && Time.time > startTime + levelSO.Steps[indexBoss].TimeSpawn)
+            {
+                foreach (var step in levelSO.Steps[indexBoss].InfoSteps)
+                {
+                    var x = Instantiate(step.prefab, transform.position, Quaternion.identity);
+                    x.Init(step.info);
+                    x.SetTarget(Player.transform);
+                    float currentTime = Time.time;
+                    x.OnDead += () =>
+                    {
+                        timeAttackBoss += Time.time - currentTime;
+                    };
+                }
+
+                indexBoss++;
+            }
+
+            return false;
+        });
     }
-    
 
     private bool isSpawnExp = false;
     [SerializeField] private Exp exp;
@@ -130,7 +154,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         return dir.normalized;
     }
 
-    public bool IsOverTime => startTime + gameTimeDuring < Time.time;
+    public bool IsOverTime => startTime + levelSO.duringLevel + timeAttackBoss< Time.time;
 
 }
 

@@ -29,9 +29,5 @@ public class Player : ActorBase
                                     (transform.right * GameManager.Instance.GetTouchDir().x * Time.deltaTime * Speed));
         }
     }
-
-    public override void Dead() {
-        base.Dead();
-        IsDead = true;
-    }
+    
 }

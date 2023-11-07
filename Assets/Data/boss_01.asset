@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e3e83ba185aa441afabc897f5284fb, type: 3}
-  m_Name: playerSO
+  m_Name: boss_01
   m_EditorClassIdentifier: 
-  hp: 99999
-  dame: 1
-  speed: 12
+  hp: 30
+  dame: 2
+  speed: 8
   delayAttack: 2
-  attackRange: 2
+  attackRange: 1
