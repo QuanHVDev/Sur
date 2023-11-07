@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c80a48e7-c2d5-4586-b43c-5f4409dca968" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sur/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sur/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Monsters/Goblin/Idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Goblin/Idle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Monsters/Mushroom/Idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Mushroom/Idle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/playerSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/playerSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Exp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Exp.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c80a48e7-c2d5-4586-b43c-5f4409dca968" name="Changes" comment="add time attack boss, level SO" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +26,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63fb9d7bd92242a7b4218da88657af33c400/b8/3e34bc84/UnityWebRequest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eef08f56e2e042f1b3027eca477293d946ac00/8e/553f64d6/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProject/Sur/Assets/Scripts/ActorBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActorBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/ActorSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -138,6 +126,7 @@
       <workItem from="1699241326109" duration="8953000" />
       <workItem from="1699256018943" duration="8277000" />
       <workItem from="1699264994533" duration="4353000" />
+      <workItem from="1699323264513" duration="326000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -211,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699265152046</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add time attack boss, level SO">
+      <option name="closed" value="true" />
+      <created>1699323556005</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699323556005</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +237,8 @@
     <MESSAGE value="spawn exp" />
     <MESSAGE value="collect" />
     <MESSAGE value="misssing" />
-    <option name="LAST_COMMIT_MESSAGE" value="misssing" />
+    <MESSAGE value="add time attack boss, level SO" />
+    <option name="LAST_COMMIT_MESSAGE" value="add time attack boss, level SO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
